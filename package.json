@@ -1,0 +1,29 @@
+{
+  "name": "custom-modal",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --https",
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "netlify": "ntl init",
+    "netlify:open": "netlify open",
+    "netlify:status": "netlify status",
+    "netlify:login": "netlify login",
+    "surge": "surge dist",
+    "ncu": "npx npm-check-updates"
+  },
+  "devDependencies": {
+    "netlify-cli": "^9.9.2",
+    "sass": "^1.49.7",
+    "surge": "^0.23.1",
+    "vite": "^2.8.0",
+    "vite-plugin-mkcert": "^1.6.0"
+  },
+  "dependencies": {
+    "mustache": "^4.2.0",
+    "navigo": "^8.11.1",
+    "page": "^1.11.6"
+  }
+}
