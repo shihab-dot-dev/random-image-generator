@@ -11,8 +11,9 @@ export class RandomImageComponent {
     this.attachToEl.insertAdjacentHTML("beforeend", templateString);
   }
   async generateImg(filter = "coding") {
+    const token = process.env.UNSPLASH_ACCESS_TOKEN;
     let response = await fetch(
-      `${unsplash.base_url}${unsplash.random_img_ep}?client_id=VOTcb1hrlwol1kds2T4y9Vw_rOYBox-LIIP5AMlnHnk&query=${filter}`
+      `${unsplash.base_url}${unsplash.random_img_ep}?client_id=${token}&query=${filter}`
     );
     const finalData = await response.json();
     console.log("response is", finalData.urls.small);

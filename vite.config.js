@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import mkcert from "vite-plugin-mkcert";
 import path from "path";
+import EnvironmentPlugin from "vite-plugin-environment";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,7 +13,10 @@ export default defineConfig({
   server: {
     https: true,
   },
-  plugins: [{ ...mkcert() }],
+  plugins: [
+    { ...mkcert() },
+    { ...EnvironmentPlugin(["UNSPLASH_ACCESS_TOKEN"]) },
+  ],
 
   resolve: {
     alias: {
