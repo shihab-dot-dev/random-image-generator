@@ -1,0 +1,19 @@
+#sh-search-form-cmpnt {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+  padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+    }
+    button {
+        cursor: pointer;
+        padding: 10px 20px;
+        background: green;
+        color: #eee;
+        border: none;
+        border-radius: 8px;
+    }
+}
